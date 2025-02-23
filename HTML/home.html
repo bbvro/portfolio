@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Velazquez-Romero - Technical Communicator</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../Images/avatar.png" srcset="../Images/avatar@2x.png 2x, ../Images/avatar@3x.png 3x" width="90" height="90" class="avatar" />
+            <h1>Brian Velazquez-Romero</h1>
+            <p>I am a graduating senior at Kennesaw State University studying technical communication.
+                <br><br>Throughout my academic career, I have completed various projects that demonstrate my expertise in clear and effective communication.
+                My experience includes creating white papers, manuals, PowerPoint presentations, technical reports, recommendation reports, and conducting usability testing.
+                <br><br>Additionally, I have developed strong skills in copyediting, information architecture, and information design.</p>
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.linkedin.com/in/brian-velazquez-romero-6b2a28350" target="_blank" class="linkedin-button">
+                        <img src="../Images/linkedIn.png" alt="LinkedIn" class="linkedin-logo">
+                    </a>
+                </li>
+            </ul>
+        </header>
+        
+        <main>
+            <section class="projects">
+                <h2>Featured School Projects</h2>
+                <p>A collection of academic projects showcasing my technical communication skills.</p>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <a href="../Documents/KSU_White_Paper.pdf" target="_blank">
+                            <h3>Discover Technical Communication</h3>
+                            <p>A white paper introducing technical communication as a career path.</p>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="../Documents/The_Friendly_Trap_Manual.pdf" target="_blank">
+                            <h3>The Friendly Trap</h3>
+                            <p>A technical manual detailing the use of a humane mouse trap.</p>
+                        </a>
+                    </article>
+                    <article class="project-card">
+                        <a href="../Documents/Owl_Express_Usability_Test.pdf" target="_blank">
+                            <h3>Usability Test on Owl Express</h3>
+                            <p>An analysis and usability test of KSU's Owl Express student portal.</p>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>2025 Brian Velazquez-Romero.</p>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">◑</button>
+        </footer>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+        }
+
+        // Keep dark mode preference persistent
+        window.onload = function () {
+            if (localStorage.getItem('dark-mode') === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+        };
+    </script>
+</body>
+</html>
