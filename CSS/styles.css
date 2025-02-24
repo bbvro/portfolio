@@ -64,7 +64,7 @@ p {
     align-items: center;
 }
 
-.linkedin-button {
+.linkedin-button, .github-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +74,7 @@ p {
     background-color: transparent;
 }
 
-.linkedin-logo {
+.linkedin-logo, .github-logo {
     width: 50px;
     height: 50px;
 }
@@ -130,6 +130,10 @@ p {
 
 .project-card:nth-child(3)::before {
     background-image: url('../Images/Owl_Express_Test.png');
+}
+
+.project-card:nth-child(4)::before {
+    background-image: url('../Images/Passkey_Duo_Presentation.png');
 }
 
 .project-card:hover::before {
@@ -192,7 +196,14 @@ footer {
 .dark-mode-toggle {
     cursor: pointer;
     background: none;
-    border: none;
+    border: 2px solid #282b30;
+    padding: 10px 15px;
+    border-radius: 8px;
     font-size: 24px;
     color: inherit;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: rgba(40, 43, 48, 0.1);
 }
