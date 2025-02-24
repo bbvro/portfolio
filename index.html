@@ -27,6 +27,11 @@
                         <img src="Images/github.png" alt="GitHub" class="github-logo">
                     </a>
                 </li>
+                <li>
+                    <a href="mailto:brianromerov@gmail.com" class="email-button">
+                        <img src="Images/email.png" alt="Email" class="email-logo">
+                    </a>
+                </li>
             </ul>
         </header>
         
@@ -62,7 +67,10 @@
                 </div>
             </section>
         </main>
+    </div>
 
+    <!-- Footer Container to Fully Cover Bottom -->
+    <div class="footer-container">
         <footer>
             <p>2025 Brian Velazquez-Romero.</p>
             <button class="dark-mode-toggle" onclick="toggleDarkMode()">◐</button>
@@ -74,12 +82,20 @@
             document.body.classList.toggle('dark-mode');
             localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
         }
-
+    
         // Keep dark mode preference persistent
         window.onload = function () {
+            // Temporarily disable transitions
+            document.body.classList.add('no-transition');
+    
             if (localStorage.getItem('dark-mode') === 'true') {
                 document.body.classList.add('dark-mode');
             }
+    
+            // Remove the class after a short delay to restore transitions
+            setTimeout(() => {
+                document.body.classList.remove('no-transition');
+            }, 100);
         };
     </script>
 </body>
