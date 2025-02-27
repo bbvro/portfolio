@@ -2,11 +2,14 @@
 html, body {
     width: 100%;
     overflow-x: hidden;
+    margin-top: 1px;  /* Slightly increased top margin */
+    margin-bottom: 1px; /* Slightly increased bottom margin */
+    height: 100%; /* Ensure the body takes full height */
 }
 
-/* Main styles */
+/* Default light theme styles */
 body {
-    font-family: Inter, sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -15,19 +18,15 @@ body {
     text-align: left;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    transition: background-color 0.3s, color 0.3s;
+    min-height: 100%; /* Ensure the body takes full height */
+    margin-top: 20px; /* Adjusted for a moderate amount of space at the top */
+    margin-bottom: 20px; /* Adjusted for a moderate amount of space at the bottom */
 }
 
-/* Dark Mode */
+/* Dark theme styles */
 body.dark-mode {
     background-color: #121212;
-    color: #ffffff;
-}
-
-/* Disable dark mode transition on page load */
-body.no-transition * {
-    transition: none !important;
+    color: #fff;
 }
 
 /* Ensure no extra width issues */
@@ -38,6 +37,8 @@ body.no-transition * {
     flex: 1;
     box-sizing: border-box;
     width: 100%;
+    margin-top: 20px; /* Added margin to the top of the container */
+    margin-bottom: 20px; /* Added margin to the bottom of the container */
 }
 
 @media (max-width: 768px) {
@@ -72,7 +73,7 @@ p {
     max-width: 780px;
 }
 
-/* ✅ Fix: Keep left-aligned text & buttons on mobile */
+/* Fix: Keep left-aligned text & buttons on mobile */
 @media (max-width: 768px) {
     h1 {
         font-size: 28px;
@@ -194,7 +195,7 @@ p {
     background-image: url('../Images/Passkey_Duo_Presentation.png');
 }
 
-.project-card:hover::before {
+.project-card:hover::before, .project-card:active::before {
     transform: scale(1.05);
 }
 
@@ -237,7 +238,7 @@ p {
     margin-bottom: 10px;
 }
 
-/* Footer Container - Covers Bottom Portion */
+/* Footer Container - Ensures Footer Sticks to Bottom */
 .footer-container {
     width: 100%;
     margin-top: auto;
@@ -248,48 +249,28 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100px;
+    min-height: 100px;  /* Keep the footer height */
+    flex-shrink: 0;
+    border-top: 1px solid rgba(40, 43, 48, 0.5);
+    padding: 20px; /* Add padding for aesthetics */
 }
 
 /* Footer */
 footer {
-    text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align footer text to the left */
     padding: 20px;
 }
 
 /* Footer Text Alignment */
 footer p {
     margin: 0;
-}
-
-/* Dark Mode Button */
-.dark-mode-toggle {
-    cursor: pointer;
-    background: none;
-    border: 2px solid #282b30;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 24px;
-    color: inherit;
-    transition: background-color 0.3s, border-color 0.3s;
-    margin-top: 10px;
-}
-
-.dark-mode-toggle:hover {
-    background-color: rgba(40, 43, 48, 0.1);
-}
-
-/* Prevent Animation on Page Refresh */
-.no-transition * {
-    transition: none !important;
-}
-
-/* Prevent Horizontal Scrolling */
-* {
-    box-sizing: border-box;
+    text-align: left; /* Align footer text to the left */
+    width: 100%; /* Ensures the text spans across the full width */
+    max-width: 860px; /* Match container width */
+    margin-left: auto; /* Center align the text in the footer container */
+    margin-right: auto; /* Center align the text in the footer container */
 }
