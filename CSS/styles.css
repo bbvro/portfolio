@@ -2,8 +2,6 @@
 html, body {
     width: 100%;
     overflow-x: hidden;
-    margin-top: 1px;  /* Slightly increased top margin */
-    margin-bottom: 1px; /* Slightly increased bottom margin */
     height: 100%; /* Ensure the body takes full height */
 }
 
@@ -19,8 +17,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%; /* Ensure the body takes full height */
-    margin-top: 20px; /* Adjusted for a moderate amount of space at the top */
-    margin-bottom: 20px; /* Adjusted for a moderate amount of space at the bottom */
 }
 
 /* Dark theme styles */
