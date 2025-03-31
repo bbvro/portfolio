@@ -170,29 +170,46 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.07);
     transition: transform 0.6s ease-in-out;
     z-index: 0;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .project-card:nth-child(1)::before {
-    background-image: url('../Images/KSU_White_Paper.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card.png');
 }
 
 .project-card:nth-child(2)::before {
-    background-image: url('../Images/Friendly_Trap.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card2.png');
 }
 
 .project-card:nth-child(3)::before {
-    background-image: url('../Images/Owl_Express_Test.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card3.png');
 }
 
 .project-card:nth-child(4)::before {
-    background-image: url('../Images/Passkey_Duo_Presentation.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card4.png');
+}
+
+.project-card:nth-child(5)::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card5.png');
 }
 
 .project-card:hover::before, .project-card:active::before {
     transform: scale(1.05);
+}
+
+/* Project Icons */
+.project-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 20%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    margin-top: 10px;
+    z-index: 3;
+    position: relative;
 }
 
 /* Dark Shadow Effect */
@@ -214,18 +231,22 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
-    padding: 30px;
+    padding: 40px 20px 30px;;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .project-card h3, .project-card p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
     position: relative;
     z-index: 2;
     color: white;
