@@ -7,11 +7,12 @@ html, body {
 
 /* Default light theme styles */
 body {
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300; /* Light for body text */
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #fff;
+    background-color: #fff;    ;
     color: #282b30;
     text-align: left;
     display: flex;
@@ -19,10 +20,41 @@ body {
     min-height: 100%; /* Ensure the body takes full height */
 }
 
+/* Subtitle style */
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #444B54;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .subtitle {
+    color: #D0D3E1;
+}
+
 /* Dark theme styles */
 body.dark-mode {
     background-color: #121212;
-    color: #fff;
+    color: #E1E5F2;
+}
+
+body.dark-mode p {
+    color: #D0D3E1;
+}
+
+body.dark-mode footer p {
+    color: #B8BFD9;
+}
+
+body.dark-mode h2 {
+    color: #AAB4F7;
+}
+
+body.dark-mode .footer-container {
+    background-color: #1D1D1D;
+    border-top: 1px solid #3F51B5;
 }
 
 /* Ensure no extra width issues */
@@ -56,17 +88,29 @@ body.dark-mode {
 }
 
 h1 {
-    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    margin: 20px 0;
-    text-align: left;
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: #3F51B5
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: #3F51B5; /* Ocean Indigo */
 }
 
 p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     font-size: 18px;
-    margin: 10px 0;
-    text-align: left;
-    max-width: 780px;
+    line-height: 1.7;
+    color: #444B54
 }
 
 /* Fix: Keep left-aligned text & buttons on mobile */
@@ -107,16 +151,27 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     background-color: transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Social Button Hover Effects */
+.linkedin-button:hover, .github-button:hover, .email-button:hover {
+    background-color: #C8BFE7; /* Lavender Mist */
+    transform: translateY(-3px); /* Optional lift effect */
+}
+
+.linkedin-button, .github-button, .email-button:active {
+    transform: scale(0.95); /* Small tap effect */
+}
 /* Social Icons */
 .linkedin-logo, .github-logo, .email-logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 /* Project Section */
@@ -148,7 +203,7 @@ p {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0px 5px 10px rgba(25, 27, 31, 0.15);
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     color: white;
     display: flex;
@@ -177,27 +232,42 @@ p {
 }
 
 .project-card:nth-child(1)::before {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card.png');
+    background-image: linear-gradient(to bottom, #7986D7, #C8BFE7);
 }
 
 .project-card:nth-child(2)::before {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card2.png');
+    background-image: linear-gradient(to bottom, #C8BFE7, #7986D7);
 }
 
 .project-card:nth-child(3)::before {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card3.png');
+    background-image: linear-gradient(to bottom, #9A8CD7, #C8BFE7);
 }
 
 .project-card:nth-child(4)::before {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card4.png');
+    background-image: linear-gradient(to bottom, #7986D7, #C8BFE7);
 }
 
 .project-card:nth-child(5)::before {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), url('../Images/project-card5.png');
+    background-image: linear-gradient(to bottom, #5A6ACF, #C8BFE7);
 }
 
 .project-card:hover::before, .project-card:active::before {
     transform: scale(1.05);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover::before {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+.project-card:hover .project-icon {
+  box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.6);
+  transition: box-shadow 0.3s ease;
 }
 
 /* Project Icons */
@@ -210,20 +280,9 @@ p {
     margin-top: 10px;
     z-index: 3;
     position: relative;
+    background-color: #FFFFFF;
 }
 
-/* Dark Shadow Effect */
-.project-card::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-    border-radius: 20px;
-    z-index: 1;
-}
 
 .project-card a {
     text-decoration: none;
@@ -243,16 +302,18 @@ p {
     text-align: center;
 }
 
-.project-card h3, .project-card p {
+.project-card h3,
+.project-card p {
     font-size: 16px;
     margin: 0;
     line-height: 1.5;
     position: relative;
     z-index: 2;
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     text-align: center;
     margin-bottom: 10px;
+    transition: text-shadow 0.3s ease;
 }
 
 /* Footer Container - Ensures Footer Sticks to Bottom */
@@ -262,14 +323,14 @@ p {
     position: relative;
     bottom: 0;
     left: 0;
-    background-color: rgba(171, 182, 193, 0.05);
+    background-color: #F4F6FA;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100px;  /* Keep the footer height */
+    min-height: 100px;
     flex-shrink: 0;
-    border-top: 1px solid rgba(40, 43, 48, 0.5);
-    padding: 20px; /* Add padding for aesthetics */
+    border-top: 1px solid #C8BFE7;
+    padding: 20px;
 }
 
 /* Footer */
@@ -290,4 +351,16 @@ footer p {
     max-width: 860px; /* Match container width */
     margin-left: auto; /* Center align the text in the footer container */
     margin-right: auto; /* Center align the text in the footer container */
+    color: #444B54;
+}
+
+body.dark-mode .linkedin-button:hover,
+body.dark-mode .github-button:hover,
+body.dark-mode .email-button:hover {
+  background-color: #3F51B5;
+}
+
+body.dark-mode .project-card h3,
+body.dark-mode .project-card p {
+  color: #FFFFFF;
 }
