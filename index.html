@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <meta name="robots" content="index, follow">
     
     <!-- Favicon Support for Different Browsers -->
@@ -16,7 +17,7 @@
     <!-- SEO Metadata -->
     <title>Brian Velazquez-Romero - Technical Communicator</title>
     <meta name="description" content="Brian Velazquez-Romero is a technical communicator specializing in white papers, manuals, usability testing, and information design.">
-    <meta name="keywords" content="Technical Communication, Technical Writing, White Paper, Usability Testing, Information Design, Copyediting, UX Writing, Information Architecture, Kennesaw, Kennesaw State University, KSU, Georgia, Atlanta, GA, University, Marietta, Cobb County, Cobb, Technical Communicator, Brian Velazquez-Romero, Brian Velazquez, Brian Romero, Brian Velazquez Romero, Brian Velazquez-Romero Portfolio, Velazquez, Romero, Velazquez-Romero, Velazquez Romero, VelazquezRomero, Portfolio, Brian">
+    <meta name="keywords" content="Technical Communication, Technical Writing, White Paper, Usability Testing, Information Design, Copyediting, UX Writing, Information Architecture, Kennesaw, Kennesaw State University, KSU, Graduate, Georgia, Atlanta, GA, University, Marietta, Cobb County, Cobb, Technical Communicator, Brian Velazquez-Romero, Brian Velazquez, Brian Romero, Brian Velazquez Romero, Brian Velazquez-Romero Portfolio, Velazquez, Romero, Velazquez-Romero, Velazquez Romero, VelazquezRomero, Portfolio, Brian">
     <meta name="author" content="Brian Velazquez-Romero">
     
     <!-- Social Media Metadata -->
@@ -65,6 +66,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- CSS Link -->
     <link rel="stylesheet" href="CSS/styles.css">
+    <script>
+      // Sync site appearance with system preference on load
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark-mode');
+      }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -72,7 +79,7 @@
             <img src="Images/avatar.png" srcset="Images/avatar@2x.png 2x, Images/avatar@3x.png 3x" width="90" height="90" class="avatar" alt="Brian Velazquez-Romero">
             <h1>Brian Velazquez-Romero</h1>
             <h2 class="subtitle">Turning complexity into clarity</h2>
-            <p>Hi! I am a graduating senior at Kennesaw State University studying technical communication.
+            <p>Hi! I recently graduated from Kennesaw State University with a degree in Technical Communication.
                 <br><br>Throughout my academic career, I have completed various projects that demonstrate my expertise in clear and effective communication.
                 I've worked on creating white papers, manuals, PowerPoint presentations, technical reports, recommendation reports, and conducting usability testing.
             </p>
@@ -110,37 +117,42 @@
                 <div class="project-grid">
                     <article class="project-card">
                         <a href="Documents/KSU_White_Paper.pdf" target="_blank">
-                            <img src="Images/page-flip-icon.png" alt="Page Flip Icon" class="project-icon">
-                            <h3>Discover Technical Communication</h3>
-                            <p>A white paper introducing technical communication as a career path.</p>
+                            <div class="card-content">
+                                <h3>Discover Technical Communication</h3>
+                                <p>A white paper introducing<br>technical communication as a career path.</p>
+                            </div>
                         </a>
                     </article>
                     <article class="project-card">
                         <a href="Documents/The_Friendly_Trap_Manual.pdf" target="_blank">
-                            <img src="Images/manual-icon.png" alt="Technical Manual Icon" class="project-icon">
-                            <h3>The Friendly Trap</h3>
-                            <p>A technical manual detailing the use of a humane mouse trap.</p>
+                            <div class="card-content">
+                                <h3>The Friendly Trap</h3>
+                                <p>A technical manual detailing<br>the use of a humane mouse trap.</p>
+                            </div>
                         </a>
                     </article>
                     <article class="project-card">
                         <a href="Documents/Owl_Express_Usability_Test.pdf" target="_blank">
-                            <img src="Images/usability-icon.png" alt="Usability Icon" class="project-icon">
-                            <h3>Usability Test on Owl Express</h3>
-                            <p>An analysis and usability test of KSU's Owl Express student portal.</p>
+                            <div class="card-content">
+                                <h3>Usability Test on Owl Express</h3>
+                                <p>An analysis and usability test of<br>KSU's Owl Express student portal.</p>
+                            </div>
                         </a>
                     </article>
                     <article class="project-card">
                         <a href="Documents/Passkey_Duo_Presentation.pdf" target="_blank">
-                            <img src="Images/ppt-icon.png" alt="PowerPoint Icon" class="project-icon">
-                            <h3>Setting Up Passkey on Duo Mobile</h3>
-                            <p>A PowerPoint presentation on how to set up Passkey authentication using Duo Mobile.</p>
+                            <div class="card-content">
+                                <h3>Setting Up Passkey on Duo Mobile</h3>
+                                <p>A PowerPoint presentation on how to set up<br>Passkey authentication using Duo Mobile.</p>
+                            </div>
                         </a>
                     </article>
                     <article class="project-card">
                         <a href="https://storymaps.arcgis.com/stories/1c86762180154004812081e37563a5a4" target="_blank">
-                            <img src="Images/map-icon.png" alt="Map Icon" class="project-icon">
-                            <h3>Mapping Outdoor Signal Data for Schools</h3>
-                            <p>An ArcGIS StoryMap showcasing my skills in GIS software.</p>
+                            <div class="card-content">                             
+                                <h3>Mapping Outdoor Signal Data for Schools</h3>
+                                <p>An ArcGIS StoryMap showcasing<br>my skills in GIS software.</p>
+                            </div>
                         </a>
                     </article>
                 </div>
