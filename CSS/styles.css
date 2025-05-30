@@ -1,3 +1,4 @@
+/* Global Settings */
 /* Prevent horizontal scrolling */
 html, body {
     width: 100%;
@@ -5,7 +6,7 @@ html, body {
     height: 100%; /* Ensure the body takes full height */
 }
 
-/* Default light theme styles */
+/* Layout */
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300; /* Light for body text */
@@ -20,44 +21,7 @@ body {
     min-height: 100%; /* Ensure the body takes full height */
 }
 
-/* Subtitle style */
-.subtitle {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #444B54;
-    margin-top: -10px;
-    margin-bottom: 20px;
-}
-
-body.dark-mode .subtitle {
-    color: #D0D3E1;
-}
-
-/* Dark theme styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #E1E5F2;
-}
-
-body.dark-mode p {
-    color: #D0D3E1;
-}
-
-body.dark-mode footer p {
-    color: #B8BFD9;
-}
-
-body.dark-mode h2 {
-    color: #AAB4F7;
-}
-
-body.dark-mode .footer-container {
-    background-color: #1D1D1D;
-    border-top: 1px solid #3F51B5;
-}
-
-/* Ensure no extra width issues */
+/* Container */
 .container {
     max-width: 860px;
     margin: 0 auto;
@@ -69,24 +33,8 @@ body.dark-mode .footer-container {
     margin-bottom: 40px; /* Added margin to the bottom of the container */
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-}
-
-/* Header */
-.header {
-    padding: 40px 0;
-}
-
-.avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px rgba(40, 43, 48, 0.2);
-}
-
+/* Typography */
+/* Headings */
 h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -105,6 +53,7 @@ h2 {
     color: #3F51B5; /* Ocean Indigo */
 }
 
+/* Paragraphs */
 p {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -113,21 +62,26 @@ p {
     color: #444B54
 }
 
-/* Fix: Keep left-aligned text & buttons on mobile */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 28px;
-        text-align: left;
-    }
+/* Subtitle style */
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #444B54;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
 
-    p {
-        font-size: 16px;
-        text-align: left;
-    }
+/* Layout - Header */
+.header {
+    padding: 40px 0;
+}
 
-    .social-links {
-        justify-content: left;
-    }
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(40, 43, 48, 0.2);
 }
 
 /* Social Links */
@@ -168,18 +122,19 @@ p {
 .linkedin-button, .github-button, .email-button:active {
     transform: scale(0.95); /* Small tap effect */
 }
+
 /* Social Icons */
 .linkedin-logo, .github-logo, .email-logo {
     width: 60px;
     height: 60px;
 }
 
-/* Project Section */
+/* Projects */
 .projects {
     padding-bottom: 40px;
 }
 
-/* Fix width issues for projects */
+/* Project Grid */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -191,12 +146,7 @@ p {
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* Project Card */
 .project-card {
     position: relative;
     overflow: hidden;
@@ -241,7 +191,7 @@ p {
     border-bottom-right-radius: 20px;
 }
 
-/* Background Images */
+/* Background Images for Project Cards */
 .project-card::before {
     content: "";
     position: absolute;
@@ -275,6 +225,7 @@ p {
     background-image: linear-gradient(to bottom, #5A6ACF, #C8BFE7);
 }
 
+/* Project Card Hover Effects */
 .project-card:hover::before, .project-card:active::before {
     transform: scale(1.05);
 }
@@ -290,11 +241,7 @@ p {
     filter: brightness(1.1);
 }
 
-
-
-
-
-
+/* Project Card Links and Text */
 .project-card a {
     text-decoration: none;
     color: inherit;
@@ -330,7 +277,7 @@ p {
     padding-top: 6px;
 }
 
-/* Footer Container - Ensures Footer Sticks to Bottom */
+/* Footer */
 .footer-container {
     width: 100%;
     margin-top: auto;
@@ -347,7 +294,6 @@ p {
     padding: 20px;
 }
 
-/* Footer */
 footer {
     width: 100%;
     display: flex;
@@ -357,7 +303,6 @@ footer {
     padding: 20px;
 }
 
-/* Footer Text Alignment */
 footer p {
     margin: 0;
     text-align: left; /* Align footer text to the left */
@@ -366,6 +311,33 @@ footer p {
     margin-left: auto; /* Center align the text in the footer container */
     margin-right: auto; /* Center align the text in the footer container */
     color: #444B54;
+}
+
+/* Theme - Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #E1E5F2;
+}
+
+body.dark-mode .subtitle {
+    color: #D0D3E1;
+}
+
+body.dark-mode p {
+    color: #D0D3E1;
+}
+
+body.dark-mode footer p {
+    color: #B8BFD9;
+}
+
+body.dark-mode h2 {
+    color: #AAB4F7;
+}
+
+body.dark-mode .footer-container {
+    background-color: #1D1D1D;
+    border-top: 1px solid #3F51B5;
 }
 
 body.dark-mode .linkedin-button:hover,
@@ -388,6 +360,39 @@ body.dark-mode .project-card::after {
     box-shadow: inset 0 20px 20px -20px rgba(255, 255, 255, 0.05); /* softened shadow for dark mode */
 }
 
+/* Media Queries */
+/* Container padding adjustment */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Responsive typography and social links alignment */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+        text-align: left;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .social-links {
+        justify-content: left;
+    }
+}
+
+/* Responsive project grid */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark mode prefers-color-scheme override */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
@@ -406,26 +411,5 @@ body.dark-mode .project-card::after {
 
   .project-card::after {
     box-shadow: inset 0 20px 20px -20px rgba(255, 255, 255, 0.05);
-  }
-}
-
-/* Simulate hover effects on mobile (touch) devices */
-@media (hover: none) and (pointer: coarse) {
-  .project-card:active {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.4),
-                0 0 25px rgba(255, 255, 255, 0.6);
-  }
-
-  .project-card:active::before {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-  }
-
-  .linkedin-button:active,
-  .github-button:active,
-  .email-button:active {
-    background-color: #C8BFE7;
-    transform: translateY(-3px);
   }
 }
