@@ -206,7 +206,7 @@ p {
 }
 
 .project-card:nth-child(1)::before {
-    background-image: linear-gradient(to bottom, #7986D7, #C8BFE7);
+    background-image: linear-gradient(to bottom, #6f7ed4, #bdb4e3);
 }
 
 .project-card:nth-child(2)::before {
@@ -223,6 +223,10 @@ p {
 
 .project-card:nth-child(5)::before {
     background-image: linear-gradient(to bottom, #5A6ACF, #C8BFE7);
+}
+
+.project-card:nth-child(6)::before {
+    background-image: linear-gradient(to bottom, #7986D7, #C8BFE7);
 }
 
 /* Project Card Hover Effects */
