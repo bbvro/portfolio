@@ -166,12 +166,15 @@
     <!-- Footer -->
     <div class="footer-container">
         <footer>
-            <p>© 2025 Brian Velazquez-Romero.</p>
+            <p>© <span id="year"></span> Brian Velazquez-Romero.</p>
         </footer>
     </div>
 
     <!-- Scripts -->
     <script>
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
         // Function to apply theme
         function applyTheme(isDarkMode) {
             if (isDarkMode) {
